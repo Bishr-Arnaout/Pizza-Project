@@ -10,7 +10,7 @@ namespace Pizza_Project
         {
             InitializeComponent();
         }
-        void UpdateOrderSummary()
+        void ResetForm()
         {
             gb_Size.Enabled = true;
             gb_Crust_Type.Enabled = true;
@@ -21,7 +21,6 @@ namespace Pizza_Project
             rbSmall.Checked = true;
             rbThin.Checked = true;
             rbEat_In.Checked = true;
-            lblToppings.Text = "Nothing";
 
             chkCheese.Checked = false;
             chkBeef.Checked = false;
@@ -30,36 +29,48 @@ namespace Pizza_Project
             chkOnion.Checked = false;
             chkMushrooms.Checked = false;
         }
-        int CrustPrice()
+        void UpdateOrderSummary()
         {
-            if (rbThick.Checked) return 5;
-
-            return 0;
+            UpdateSize();
+            UpdateCrust();
+            UpdatePlace();
+            UpdateToppings();
+            UpdatePrice();
         }
-        int ToppingsPrice()
+        float CrustPrice()
         {
-            int Price = default;
+            if (rbThick.Checked) return Convert.ToSingle(rbThick.Tag);
 
-            if (chkBeef.Checked) Price += 5;
-            if (chkCheese.Checked) Price += 5;
-            if (chkMushrooms.Checked) Price += 5;
-            if (chkOnion.Checked) Price += 5;
-            if (chkTurkey.Checked) Price += 5;
-            if (chkTometo.Checked) Price += 5;
+            return Convert.ToSingle(rbThin.Tag);
+        }
+        float ToppingsPrice()
+        {
+            float Price = default;
+
+            if (chkBeef.Checked) Price += Convert.ToSingle(chkBeef.Tag);
+            if (chkCheese.Checked) Price += Convert.ToSingle(chkCheese.Tag);
+            if (chkMushrooms.Checked) Price += Convert.ToSingle(chkMushrooms.Tag);
+            if (chkOnion.Checked) Price += Convert.ToSingle(chkOnion.Tag);
+            if (chkTurkey.Checked) Price += Convert.ToSingle(chkTurkey.Tag);
+            if (chkTometo.Checked) Price += Convert.ToSingle(chkTometo.Tag);
 
             return Price;
         }
-        int SizePrice()
+        float SizePrice()
         {
-            if (rbSmall.Checked) return 10;
+            if (rbSmall.Checked) return Convert.ToSingle(rbSmall.Tag);
 
-            if (rbMedium.Checked) return 20;
+            if (rbMedium.Checked) return Convert.ToSingle(rbMedium.Tag);
 
-            return 30;
+            return Convert.ToSingle(rbLarge.Tag);
+        }
+        float CalaculateTotalPrice()
+        {
+            return SizePrice() + ToppingsPrice() + CrustPrice();
         }
         void UpdatePrice()
         {
-            lblPrice.Text = (SizePrice() + ToppingsPrice() + CrustPrice()).ToString() + "$";
+            lblPrice.Text = CalaculateTotalPrice().ToString() + "$";
         }
         void UpdateSize()
         {
@@ -82,7 +93,7 @@ namespace Pizza_Project
             if (chkOnion.Checked) stToppings += ", Onion";
             if (chkMushrooms.Checked) stToppings += ", Mushrooms";
 
-            if (stToppings == "") stToppings = "Nothing";
+            if (stToppings == "") stToppings = "No Toppings";
             else if (stToppings.StartsWith(",")) stToppings = stToppings.Substring(1, stToppings.Length - 1).Trim();
 
             lblToppings.Text = stToppings;
@@ -157,7 +168,7 @@ namespace Pizza_Project
         }
         private void btn_To_Main_frm_Click(object sender, EventArgs e)
         {
-            UpdateOrderSummary();
+            ResetForm();
         }
         void PerformOrder()
         {
@@ -169,10 +180,8 @@ namespace Pizza_Project
         }
         private void btn_To_Purchase_frm_Click(object sender, EventArgs e)
         {
-            DialogResult Result = MessageBox.Show("Do you want to perform this order?", "Perform Order", MessageBoxButtons.OKCancel,
-                MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if (DialogResult.OK == Result) PerformOrder();
+            if (MessageBox.Show("Do you want to perform this order?", "Perform Order", MessageBoxButtons.OKCancel,
+                MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.OK) PerformOrder();
         }
     }
 }
