@@ -3,15 +3,15 @@
   "WorkspaceRootPath": "D:\\Programming\\C# Level1\\Pizza Project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{15B18987-D318-4B08-88FF-D05450E93DB7}|Pizza Project.csproj|d:\\programming\\c# level1\\pizza project\\orderform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{15B18987-D318-4B08-88FF-D05450E93DB7}|Pizza Project.csproj|solutionrelative:orderform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{15B18987-D318-4B08-88FF-D05450E93DB7}|Pizza Project.csproj|D:\\Programming\\C# Level1\\Pizza Project\\orderform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{15B18987-D318-4B08-88FF-D05450E93DB7}|Pizza Project.csproj|solutionrelative:orderform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{15B18987-D318-4B08-88FF-D05450E93DB7}|Pizza Project.csproj|D:\\Programming\\C# Level1\\Pizza Project\\orderform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{15B18987-D318-4B08-88FF-D05450E93DB7}|Pizza Project.csproj|solutionrelative:orderform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15B18987-D318-4B08-88FF-D05450E93DB7}|Pizza Project.csproj|d:\\programming\\c# level1\\pizza project\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{15B18987-D318-4B08-88FF-D05450E93DB7}|Pizza Project.csproj|D:\\Programming\\C# Level1\\Pizza Project\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{15B18987-D318-4B08-88FF-D05450E93DB7}|Pizza Project.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
@@ -38,8 +38,7 @@
               "RelativeToolTip": "Form1.Designer.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-20T19:10:03.224Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-20T19:10:03.224Z"
             },
             {
               "$type": "Document",
@@ -50,25 +49,24 @@
               "ToolTip": "D:\\Programming\\C# Level1\\Pizza Project\\Form1.cs [Design]",
               "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-20T19:10:07.897Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-07-20T19:10:07.897Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "OrderForm.cs",
               "DocumentMoniker": "D:\\Programming\\C# Level1\\Pizza Project\\OrderForm.cs",
               "RelativeDocumentMoniker": "OrderForm.cs",
               "ToolTip": "D:\\Programming\\C# Level1\\Pizza Project\\OrderForm.cs",
               "RelativeToolTip": "OrderForm.cs",
-              "ViewState": "AQIAACYAAAAAAAAAAAAgwEQAAAATAAAA",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAowKYAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-18T08:25:12.409Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "OrderForm.cs [Design]",
               "DocumentMoniker": "D:\\Programming\\C# Level1\\Pizza Project\\OrderForm.cs",
               "RelativeDocumentMoniker": "OrderForm.cs",
